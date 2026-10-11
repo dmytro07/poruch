@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="uk" data-title-uk="Підтримка · Поруч" data-title-en="Support · Поруч">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,16 +9,17 @@
 </head>
 <body>
   <main>
-    <header>
+    <header class="top">
       <a class="brand" href="../">Поруч</a>
-      <h1>Підтримка</h1>
-      <nav class="lang-switch">
-        <span>Українська</span>
-        <a href="#en">English ↓</a>
-      </nav>
+      <div class="lang-switch" role="group" aria-label="Мова / Language">
+        <button type="button" data-lang="uk" aria-pressed="true">УКР</button>
+        <button type="button" data-lang="en" aria-pressed="false">ENG</button>
+      </div>
     </header>
 
     <section lang="uk">
+      <h1>Підтримка</h1>
+
       <div class="card">
         <p>Маєте запитання, знайшли помилку чи хочете поділитися ідеєю? Напишіть нам — ми відповімо якнайшвидше.</p>
         <p class="email"><a href="mailto:barbarosh.olya@gmail.com?subject=%D0%9F%D0%BE%D1%80%D1%83%D1%87%20%E2%80%94%20%D0%BF%D1%96%D0%B4%D1%82%D1%80%D0%B8%D0%BC%D0%BA%D0%B0">barbarosh.olya@gmail.com</a></p>
@@ -27,7 +28,7 @@
       <h2>Часті запитання</h2>
 
       <h3>Де зберігаються мої записи?</h3>
-      <p>Лише на вашому пристрої. Застосунок не має облікових записів і не надсилає ваші записи на жодні сервери. Докладніше — у <a href="../privacy/">політиці конфіденційності</a>.</p>
+      <p>Лише на вашому пристрої. Застосунок не має облікових записів і не надсилає ваші записи на жодні сервери. Докладніше — у <a href="../privacy/#uk">політиці конфіденційності</a>.</p>
 
       <h3>Як видалити всі мої дані?</h3>
       <p>Видаліть застосунок із пристрою — разом із ним буде видалено всі ваші записи. Зверніть увагу: відновити їх після цього неможливо.</p>
@@ -42,9 +43,9 @@
       <p>«Поруч» — застосунок для турботи про себе, а не заміна професійної допомоги. Якщо вам загрожує небезпека, зателефонуйте на номер екстреної допомоги 112 або зверніться до фахівця.</p>
     </section>
 
-    <hr>
+    <hr class="lang-divider">
 
-    <section id="en" lang="en">
+    <section lang="en">
       <h1>Support</h1>
 
       <div class="card">
@@ -70,5 +71,6 @@
       <p>Поруч is a self-care app, not a substitute for professional help. If you are in danger, call your local emergency number (112 in Ukraine and the EU) or reach out to a professional.</p>
     </section>
   </main>
+  <script src="../lang.js"></script>
 </body>
 </html>

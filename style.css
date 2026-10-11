@@ -39,6 +39,8 @@ main {
 
 header { margin-bottom: 32px; }
 
+section > h1 + .meta { margin-bottom: 24px; }
+
 .brand {
   display: inline-block;
   color: var(--accent);
@@ -47,7 +49,11 @@ header { margin-bottom: 32px; }
   margin-bottom: 8px;
 }
 
-h1 { font-size: 30px; line-height: 1.25; margin: 0 0 8px; }
+h1 { font-size: 30px; line-height: 1.25; margin: 0 0 8px; overflow-wrap: break-word; }
+
+@media (max-width: 420px) {
+  h1 { font-size: 25px; }
+}
 h2 { font-size: 22px; margin: 40px 0 8px; }
 h3 { font-size: 18px; margin: 24px 0 4px; }
 
@@ -58,12 +64,50 @@ a { color: var(--link); }
 
 .meta { color: var(--text-secondary); font-size: 15px; }
 
-.lang-switch {
+.top {
   display: flex;
-  gap: 12px;
-  margin-top: 16px;
-  font-size: 15px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
 }
+
+.top .brand { margin-bottom: 0; }
+
+.lang-switch {
+  display: none;
+  padding: 3px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.js .lang-switch { display: inline-flex; }
+
+.lang-switch button {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.lang-switch button[aria-pressed="true"] {
+  background: var(--accent);
+  color: #FFFFFF;
+}
+
+.lang-switch button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.js .lang-divider { display: none; }
 
 .card {
   background: var(--surface);
